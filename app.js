@@ -18,10 +18,24 @@ app.post("/", function(req,res){
         const url = req.body.repoUrl;
 
         console.log(url);
-        nodeCmd.runSync('npm install -g snyk');
+        let installed = true;
+        nodeCmd.run('snyk');
+        nodeCmd.run('snyk -v', (err, data, stderr)=>{
+                if(data.search('No such file or directory') != -1){
+                        installed = false;
+                }
+        })
+        if(installed === false){
+             nodeCmd.runSync('npm install -g snyk');
+             console.log(installed);
+        }
+  
+        nodeCmd.run('snyk -v', (err, data, stderr)=>{
+                console.log(data);
+        })
         nodeCmd.runSync('snyk auth 3fb8d4f3-00eb-49cc-ba59-21b028e30dc8');
         const synkTest = 'snyk test --json ' + url;
-        nodeCmd.run('snyk');
+        
         nodeCmd.run(
                 synkTest,
         function(err, data, stderr){
