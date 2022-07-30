@@ -1,6 +1,6 @@
-# SecureBuddy 🐱‍🏍
+# SecureBuddy 🤖
 
-[Website link](#)
+[Website link](https://vulnerability-checker.herokuapp.com/)
 
 [Demo video link](#)
 
