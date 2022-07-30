@@ -1,20 +1,24 @@
-body{
+body {
     height: 100vh;
     width: 100vw;
 }
-.main{
+
+.main {
     margin: 0;
     width: 50%;
     margin: 50px auto;
 }
-.heading{
+
+.heading {
     margin: 50px 0;
     text-align: center;
 }
-.resultBox{
-    display: none;
+
+.resultBox {
+    /* display: none; */
     margin-top: 20px;
 }
-button{
-    margin: 0 50% !important; 
+
+button {
+    margin: 0 50% !important;
 }
