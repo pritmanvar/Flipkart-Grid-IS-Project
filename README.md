@@ -2,7 +2,7 @@
 
 [Website link](https://vulnerability-checker.herokuapp.com/)
 
-[Demo video link](#)
+[Demo video link](https://youtu.be/5jM6UA-LF8Q)
 
 ## What is SecureBuddy ? 🤔
 
